@@ -1,0 +1,102 @@
+<!--
+ * @Description:  透明登陆页
+ * @Author: owen
+ * @Date: 2021-09-07 09:43:35
+ * @LastEditTime: 2021-09-07 11:04:24
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>login</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        overflow-x: hidden;
+      }
+
+      .wrap {
+        background: url("../assets/a5.jpeg");
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+      }
+      #form {
+        width: 15%;
+        background: transparent;
+        box-shadow: 2px 2px 5px 5px white;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        padding-top: 30px;
+        margin: 10% 10% 0 0;
+      }
+      #form div {
+        width: 100%;
+      }
+      input,
+      button {
+        margin-bottom: 20px;
+        outline: none;
+        border: none;
+        width: 100%;
+        letter-spacing: 4px;
+      }
+      input::-webkit-input-placeholder {
+        color: white;
+      }
+      input {
+        background: transparent;
+        border-bottom: 1px solid gainsboro;
+        padding: 0 10% 0 10%;
+        color: white;
+      }
+      button {
+        border-radius: 5px;
+        opacity: 0.5;
+      }
+
+      .wrap2 {
+        height: 100vh;
+        background: url("../assets/a1.jpeg");
+        background-size: cover;
+      }
+      .wrap3 {
+        height: 100vh;
+        background: url("../assets/a2.jpeg");
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap ">
+      <form id="form">
+        <div><input placeholder="请输入用户名" required /></div>
+        <div><input type="password" placeholder="请输入密码" required /></div>
+        <div><button type="submit">登陆</button></div>
+      </form>
+    </div>
+    <div class="wrap2"></div>
+    <div class="wrap3"></div>
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollPosition = window.pageYOffset;
+        console.log(scrollPosition);
+        const formPosition = document.querySelector("#form");
+
+        formPosition.style.transform = `translateY(${scrollPosition * 0.8}px)`;
+        // formPosition.style.transform = `translate(-100%, ${scrollPosition * 0.8 + 200}px)`;
+      });
+    </script>
+  </body>
+</html>
