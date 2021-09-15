@@ -1,0 +1,64 @@
+<!--
+ * @Description:  
+ * @Author: owen
+ * @Date: 2021-09-08 15:44:47
+ * @LastEditTime: 2021-09-09 17:32:44
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      main {
+        flex: 1;
+        position: relative;
+      }
+      main div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+      }
+      nav {
+        height: 8vh;
+        background-color: #aaa;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      nav a {
+        line-height: 3em;
+        flex: 1;
+        text-align: center;
+        text-decoration: none;
+      }
+      nav a:nth-child(2) {
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="helle"></div>
+      <div id="home"></div>
+      <div id="knock"></div>
+    </main>
+    <nav><a href="#helle">HELLO</a><a href="#home">HOME</a><a href="#knock">KNOCK</a></nav>
+  </body>
+</html>
